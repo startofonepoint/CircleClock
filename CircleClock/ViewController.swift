@@ -26,20 +26,5 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-/*
-    func updateClock() {
-        let nowDate:NSDate = NSDate()
-        let dateComponent:NSDateComponents = NSCalendar.currentCalendar().components(NSCalendarUnit.HourCalendarUnit|NSCalendarUnit.MinuteCalendarUnit|NSCalendarUnit.SecondCalendarUnit, fromDate: nowDate)
-        let second:Int = dateComponent.second
-        let minute:Int = dateComponent.minute
-        let hour:Int = dateComponent.hour
-        
-        let secAngle:CGFloat = degreesToRadians(CGFloat(second)/60.0*360.0)
-        let minAngle:CGFloat = degreesToRadians(CGFloat(minute)/60.0*360)
-        let hourAngle:CGFloat = degreesToRadians(CGFloat(hour)/12.0*360) + minAngle/12.0
-        
-        println("second Angle \(secAngle) minute Angle \(minAngle) hour Angle \(hourAngle)")
-    }
-*/
 }
 
