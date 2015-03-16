@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D98g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CircleClock" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,37 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BsO-JD-ElJ" customClass="ClockView" customModule="CircleClock" customModuleProvider="target">
+                                <rect key="frame" x="16" y="20" width="568" height="560"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4zd-Sk-oGd">
+                                        <rect key="frame" x="0.0" y="0.0" width="568" height="560"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="4zd-Sk-oGd" firstAttribute="leading" secondItem="BsO-JD-ElJ" secondAttribute="leading" id="C1t-2S-lsj"/>
+                                    <constraint firstAttribute="trailing" secondItem="4zd-Sk-oGd" secondAttribute="trailing" id="aCa-yj-h2N"/>
+                                    <constraint firstAttribute="bottom" secondItem="4zd-Sk-oGd" secondAttribute="bottom" id="cGT-bf-iEd"/>
+                                    <constraint firstItem="4zd-Sk-oGd" firstAttribute="top" secondItem="BsO-JD-ElJ" secondAttribute="top" id="d9z-ev-n5m"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BsO-JD-ElJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="18q-cs-V5A"/>
+                            <constraint firstItem="BsO-JD-ElJ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="MCy-ms-qZO"/>
+                            <constraint firstItem="BsO-JD-ElJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="eEW-MS-OnX"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BsO-JD-ElJ" secondAttribute="bottom" constant="20" id="ro0-Vx-pRH"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ballClock" destination="BsO-JD-ElJ" id="eMJ-TU-oV6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="358" y="231"/>
         </scene>
     </scenes>
 </document>

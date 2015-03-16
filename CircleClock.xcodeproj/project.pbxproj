@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5714C3CD1AB406CD0096D3D7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5714C3CC1AB406CD0096D3D7 /* QuartzCore.framework */; };
+		5714C3D01AB42B0A0096D3D7 /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5714C3CF1AB42B0A0096D3D7 /* ClockView.swift */; };
 		5740A9DF1AB2787B00A554D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5740A9DE1AB2787B00A554D5 /* AppDelegate.swift */; };
 		5740A9E11AB2787B00A554D5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5740A9E01AB2787B00A554D5 /* ViewController.swift */; };
 		5740A9E41AB2787B00A554D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5740A9E21AB2787B00A554D5 /* Main.storyboard */; };
@@ -26,6 +28,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5714C3CC1AB406CD0096D3D7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		5714C3CE1AB407A30096D3D7 /* CircleClock-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CircleClock-Bridging-Header.h"; sourceTree = "<group>"; };
+		5714C3CF1AB42B0A0096D3D7 /* ClockView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClockView.swift; path = ../ClockView.swift; sourceTree = "<group>"; };
 		5740A9D91AB2787B00A554D5 /* CircleClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CircleClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5740A9DD1AB2787B00A554D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5740A9DE1AB2787B00A554D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5714C3CD1AB406CD0096D3D7 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,9 +65,11 @@
 		5740A9D01AB2787B00A554D5 = {
 			isa = PBXGroup;
 			children = (
+				5714C3CE1AB407A30096D3D7 /* CircleClock-Bridging-Header.h */,
 				5740A9DB1AB2787B00A554D5 /* CircleClock */,
 				5740A9F11AB2787B00A554D5 /* CircleClockTests */,
 				5740A9DA1AB2787B00A554D5 /* Products */,
+				5714C3CC1AB406CD0096D3D7 /* QuartzCore.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +87,7 @@
 			children = (
 				5740A9DE1AB2787B00A554D5 /* AppDelegate.swift */,
 				5740A9E01AB2787B00A554D5 /* ViewController.swift */,
+				5714C3CF1AB42B0A0096D3D7 /* ClockView.swift */,
 				5740A9E21AB2787B00A554D5 /* Main.storyboard */,
 				5740A9E51AB2787B00A554D5 /* Images.xcassets */,
 				5740A9E71AB2787B00A554D5 /* LaunchScreen.xib */,
@@ -161,6 +170,7 @@
 				TargetAttributes = {
 					5740A9D81AB2787B00A554D5 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = MSR962JFFX;
 					};
 					5740A9ED1AB2787B00A554D5 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -213,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5740A9E11AB2787B00A554D5 /* ViewController.swift in Sources */,
+				5714C3D01AB42B0A0096D3D7 /* ClockView.swift in Sources */,
 				5740A9DF1AB2787B00A554D5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,9 +349,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = CircleClock/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CircleClock-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -348,9 +361,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = CircleClock/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CircleClock-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -407,6 +422,7 @@
 				5740A9FA1AB2787B00A554D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5740A9FB1AB2787B00A554D5 /* Build configuration list for PBXNativeTarget "CircleClockTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +431,7 @@
 				5740A9FD1AB2787B00A554D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
