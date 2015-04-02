@@ -119,7 +119,7 @@ class ClockView:UIImageView
         hrLabel.textColor = UIColor.whiteColor()
         minLabel.textColor = UIColor.whiteColor()
         secLabel.textColor = UIColor.whiteColor()
-        let labelFont = UIFont(name: "Helvetica neue", size: CGFloat(25))
+        let labelFont = UIFont(name: "Helvetica neue", size: CGFloat(20))
         hrLabel.font = labelFont
         minLabel.font = labelFont
         secLabel.font = labelFont
@@ -206,13 +206,13 @@ class ClockView:UIImageView
         //println("second Angle \(secAngle) minute Angle \(minAngle) hour Angle \(hourAngle)")
         
         //시간라벨을 수평으로 유지하도록 시간표시기가 회전하는 각도만큼 원래대로 돌린다.
-        hrLabel.layer.transform = CATransform3DMakeRotation(-hourAngle, 0, 0, 1)
+        hrLabel.layer.transform = CATransform3DMakeRotation(-secAngle, 0, 0, 1)
         minLabel.layer.transform = CATransform3DMakeRotation(-minAngle, 0, 0, 1)
-        secLabel.layer.transform = CATransform3DMakeRotation(-secAngle, 0, 0, 1)
+        secLabel.layer.transform = CATransform3DMakeRotation(-hourAngle, 0, 0, 1)
         //시간표시기를 회전시킨다.
-        hourIndicator.transform = CATransform3DMakeRotation(hourAngle, 0, 0, 1)
+        hourIndicator.transform = CATransform3DMakeRotation(secAngle, 0, 0, 1)
         minuteIndicator.transform = CATransform3DMakeRotation(minAngle, 0, 0, 1)
-        secondIndicator.transform = CATransform3DMakeRotation(secAngle, 0, 0, 1)
+        secondIndicator.transform = CATransform3DMakeRotation(hourAngle, 0, 0, 1)
     }
     
     override func awakeFromNib() {
