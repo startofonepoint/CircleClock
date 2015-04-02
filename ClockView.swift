@@ -178,7 +178,7 @@ class ClockView:UIImageView
     }
     //타이머 시작함수
     func timerStart() {
-        println("called timeStart Function")
+        println("called timeBegin Function")
         self.updateClock()
         timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("updateClock"), userInfo: nil, repeats: true)
     }

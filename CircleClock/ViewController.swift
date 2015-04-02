@@ -20,6 +20,9 @@ class ViewController: UIViewController {
         println("clock frame width = \(ballClock.frame.width) height = \(ballClock.frame.height)")
         ballClock.defaultSetup()
         ballClock.timerStart()
+        //개선사항
+        //Clock FaceImage의 굵기를 더 굵게 바꾼다.
+        
     }
 
     override func didReceiveMemoryWarning() {
